@@ -1,0 +1,119 @@
+
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slideshow Assignment</title>
+<link rel="stylesheet" href="css/foundation.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<h1 align=center> Tourist Attractions of New York City </h1>
+<a> <p align=center> By: Alex Marek</p> </a>
+<body>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="images/Liberty.jpeg" style="width:100%">
+    <div class="text">The Statue of Liberty</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div>
+    <img src="images/empire.jpeg" style="width:100%">
+    <div class="text">The Empire State Buildihng</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div>
+    <img src="images/Central.jpeg" style="width:100%">
+    <div class="text">Central Park</div>
+  </div>
+
+   <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <img src="images/timessquare.jpeg" style="width:100%">
+    <div class="text">Times Square</div>
+  </div>
+
+ <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <img src="images/bridge.jpeg" style="width:100%">
+    <div class="text">The Brooklyn Bridge</div>
+  </div>
+
+ <div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <img src="images/Washpark.jpeg" style="width:100%">
+    <div class="text">Washington Square Park</div>
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+</script>
+
+</body>
+</html> 
+
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+</body>
+<div class="grid-container"> 
+<div class="grid-x grid-padding-x">
+<div class="large-8 medium-8 small-12 cell" >
+<p align=center> New York City is one of the most popular tourist destinations in the world. It features many attractions and landmarks for visitors of all ages to see. Tourists can take a short ferry ride for optimal viewing of the Statue of Liberty, and learn about its historical significance. Other notable attractions include the Empire State Building and the Brooklyn Bridge. For those who like to spend time outside, Central Park and Washington Square Park are great for people-watching and strolling. Times Square is one of the worls most visited attracitions, with over 50 million visitors annually. </p>
+</div>
+</div>
+</div>
+</div>
+</html>
+
